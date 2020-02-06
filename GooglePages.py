@@ -2,9 +2,9 @@ from BaseApp import BasePage
 from selenium.webdriver.common.by import By
 
 class GoogleSeacrhLocators:
-    LOCATOR_GOOGLE_SEARCH_FIELD = (By.NAME, "q")
-    LOCATOR_GOOGLE_SEARCH_BUTTON = (By.CLASS_NAME, "gNO89b")
-    LOCATOR_GOOGLE_NAVIGATION_BAR = (By.ID, "top_nav")
+    LOCATOR_GOOGLE_SEARCH_FIELD = (By.XPATH, "//input[@name='q']")
+    LOCATOR_GOOGLE_SEARCH_BUTTON = (By.XPATH, "//input[@name='q']")
+    LOCATOR_GOOGLE_NAVIGATION_BAR = (By.XPATH, "XPATH")
 
 class SearchHelper(BasePage):
 
@@ -21,3 +21,4 @@ class SearchHelper(BasePage):
         all_list = self.find_elements(GoogleSeacrhLocators.LOCATOR_GOOGLE_NAVIGATION_BAR,time=2)
         nav_bar_menu = [x.text for x in all_list if len(x.text) > 0]
         return nav_bar_menu
+
