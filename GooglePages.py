@@ -1,10 +1,12 @@
 from BaseApp import BasePage
 from selenium.webdriver.common.by import By
 
+
 class GoogleSeacrhLocators:
     LOCATOR_GOOGLE_SEARCH_FIELD = (By.XPATH, "//input[@name='q']")
     LOCATOR_GOOGLE_SEARCH_BUTTON = (By.XPATH, "//input[@name='q']")
     LOCATOR_GOOGLE_NAVIGATION_BAR = (By.XPATH, "XPATH")
+
 
 class SearchHelper(BasePage):
 
